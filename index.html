@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart | Gestão Agrícola Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon" aria-hidden="true">🌾</span>
+            <h1>AgroSmart</h1>
+        </div>
+        <nav class="nav-menu" aria-label="Navegação principal">
+            <a href="#dashboard" class="nav-link active">Dashboard</a>
+            <a href="#plantacoes" class="nav-link">Plantações</a>
+            <a href="#clima" class="nav-link">Clima</a>
+            <a href="#relatorios" class="nav-link">Relatórios</a>
+        </nav>
+        <div class="user-info">
+            <button class="notification-btn" aria-label="Notificações">🔔</button>
+            <span class="user-avatar" aria-hidden="true">👨‍🌾</span>
+            <span>João Silva</span>
+        </div>
+    </header>
+
+    <main class="container" id="conteudo-principal">
+        
+        <section class="resumo-cards" id="dashboard" aria-label="Resumo operacional">
+            <div class="card-resumo">
+                <div class="card-icon" aria-hidden="true">🌱</div>
+                <div class="card-info">
+                    <h3>Área Plantada</h3>
+                    <p class="card-valor" id="areaPlantada">33 hectares</p>
+                    <p class="card-tendencia positivo">+5% este mês</p>
+                </div>
+            </div>
+
+            <div class="card-resumo">MIT License
+
+Copyright (c) 2026 gabizinha129
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+                <div class="card-icon" aria-hidden="true">💧</div>
+                <div class="card-info">
+                    <h3>Irrigação Hoje</h3>
+                    <p class="card-valor" id="irrigacaoHoje">850 L</p>
+                    <p class="card-tendencia normal">Dentro da meta</p>
+                </div>
+            </div>
+
+            <div class="card-resumo">
+                <div class="card-icon" aria-hidden="true">🌡️</div>
+                <div class="card-info">
+                    <h3>Temperatura</h3>
+                    <p class="card-valor" id="temperatura">28°C</p>
+                    <p class="card-tendencia alerta">Ideal: 22-26°C</p>
+                </div>
+            </div>
+
+            <div class="card-resumo">
+                <div class="card-icon" aria-hidden="true">🚜</div>
+                <div class="card-info">
+                    <h3>Colheita Prevista</h3>
+                    <p class="card-valor" id="colheitaPrevista">15 ton</p>
+                    <p class="card-tendencia positivo">Em 12 dias</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="plantacoes-section" id="plantacoes">
+            <div class="section-header">
+                <h2>🌽 Minhas Plantações</h2>
+                <button class="btn btn-primary" id="btnNovaPlantacao">+ Nova Plantação</button>
+            </div>
+
+            <div class="filtros-plantacoes">
+                <button class="filtro-btn active" data-filtro="todas">Todas</button>
+                <button class="filtro-btn" data-filtro="crescimento">Em Crescimento</button>
+                <button class="filtro-btn" data-filtro="colheita">Prontas para Colheita</button>
+                <button class="filtro-btn" data-filtro="irrigacao">Precisam de Irrigação</button>
+            </div>
+
+            <div class="grid-plantacoes" id="gridPlantacoes">
+                </div>
+        </section>
+
+        <section class="clima-section" id="clima">
+            <h2>🌤️ Previsão do Tempo</h2>
+            <div class="clima-grid">
+                <div class="clima-card destaque">
+                    <div class="clima-dia">Hoje</div>
+                    <div class="clima-icone" aria-hidden="true">☀️</div>
+                    <div class="clima-temp">28°C</div>
+                    <div class="clima-desc">Ensolarado</div>
+                    <div class="clima-dados">
+                        <span>💧 Umidade: 65%</span>
+                        <span>🌬️ Vento: 12 km/h</span>
+                        <span>🌧️ Chuva: 0%</span>
+                    </div>
+                </div>
+
+                <div class="clima-card">
+                    <div class="clima-dia">Amanhã</div>
+                    <div class="clima-icone" aria-hidden="true">⛅</div>
+                    <div class="clima-temp">26°C</div>
+                    <div class="clima-desc">Parcialmente Nublado</div>
+                    <div class="clima-dados">
+                        <span>💧 Umidade: 70%</span>
+                        <span>🌬️ Vento: 15 km/h</span>
+                        <span>🌧️ Chuva: 20%</span>
+                    </div>
+                </div>
+
+                <div class="clima-card">
+                    <div class="clima-dia">Depois de Amanhã</div>
+                    <div class="clima-icone" aria-hidden="true">🌧️</div>
+                    <div class="clima-temp">23°C</div>
+                    <div class="clima-desc">Chuvoso</div>
+                    <div class="clima-dados">
+                        <span>💧 Umidade: 85%</span>
+                        <span>🌬️ Vento: 18 km/h</span>
+                        <span>🌧️ Chuva: 80%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relatorios-section" id="relatorios">
+            <h2>📊 Relatórios de Inteligência</h2>
+            <div class="relatorios-grid">
+                <div class="relatorio-card">
+                    <h3>Produtividade por Cultura</h3>
+                    <div class="grafico-barras">
+                        <div class="barra-item">
+                            <span class="barra-label">Soja</span>
+                            <div class="barra-container">
+                                <div class="barra-preenchida" style="width: 85%">85%</div>
+                            </div>
+                        </div>
+                        <div class="barra-item">
+                            <span class="barra-label">Milho</span>
+                            <div class="barra-container">
+                                <div class="barra-preenchida" style="width: 92%">92%</div>
+                            </div>
+                        </div>
+                        <div class="barra-item">
+                            <span class="barra-label">Trigo</span>
+                            <div class="barra-container">
+                                <div class="barra-preenchida" style="width: 78%">78%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relatorio-card">
+                    <h3>Consumo de Água (Últimos 7 dias)</h3>
+                    <div class="consumo-info">
+                        <span class="consumo-numero">5.950 L</span>
+                        <span class="consumo-meta">Meta Otimizada por IA: 7.000 L</span>
+                        <div class="economia-agua">
+                            <span class="badge-sucesso">✅ 15% de Economia Sustentável</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relatorio-card">
+                    <h3>Análise de Risco de Pragas</h3>
+                    <div class="pragas-status">
+                        <div class="praga-item">
+                            <span>🐛 Lagarta-do-cartucho</span>
+                            <span class="status-baixo">Baixo Risco</span>
+                        </div>
+                        <div class="praga-item">
+                            <span>🦗 Gafanhoto</span>
+                            <span class="status-medio">Médio Risco</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="acessibilidade-container" id="caixaAcessibilidade">
+        <button class="acessibilidade-toggle" id="btnToggleAcessibilidade" title="Menu de Acessibilidade" aria-expanded="false" aria-controls="menuAcessibilidade">♿</button>
+        <div class="acessibilidade-menu" id="menuAcessibilidade" aria-hidden="true">
+            <button id="btnAumentarTexto" title="Aumentar Fonte">➕ Aumentar Fonte</button>
+            <button id="btnDiminuirTexto" title="Diminuir Fonte">➖ Diminuir Fonte</button>
+            <button id="btnAlternarTema" title="Alternar Modo Escuro/Claro">🌗 Alternar Tema</button>
+            <button id="btnIniciarLeitura" title="Ouvir Conteúdo">🔊 Ler Página</button>
+            <button id="btnPararLeitura" title="Parar Leitura de Voz" disabled>🛑 Parar Leitura</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalPlantacao" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🌱 Nova Plantação Inteligente</h3>
+                <button class="btn-fechar" id="btnFecharModal" aria-label="Fechar modal">✕</button>
+            </div>
+            <form id="formPlantacao">
+                <div class="form-group">
+                    <label for="cultura">Cultura</label>
+                    <select id="cultura" required>
+                        <option value="">Selecione...</option>
+                        <option value="Soja">Soja</option>
+                        <option value="Milho">Milho</option>
+                        <option value="Trigo">Trigo</option>
+                        <option value="Café">Café</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="area">Área (hectares)</label>
+                    <input type="number" id="area" min="0.1" step="0.1" placeholder="Ex: 12.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataPlantio">Data do Plantio</label>
+                    <input type="date" id="dataPlantio" required>
+                </div>
+                <div class="form-group">
+                    <label for="irrigacao">Sistema Automatizado</label>
+                    <select id="irrigacao">
+                        <option value="gotejamento">Gotejamento Inteligente</option>
+                        <option value="aspersao">Aspersão Controlada</option>
+                        <option value="pivo">Pivô Central Automatizado</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Salvar Plantação</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 AgroSmart - Inteligência Artificial Aplicada ao Campo. Todos os direitos reservados.</p>
+        <p>🌍 Monitoramento Sustentável de Alta Precisão</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
